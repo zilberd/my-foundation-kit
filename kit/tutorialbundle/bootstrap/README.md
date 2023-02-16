@@ -40,6 +40,8 @@ No modules.
 | [azuread_service_principal_password.cloudfoundation_deploy](https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/resources/service_principal_password) | resource |
 | [azurerm_resource_group.tfstate](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group) | resource |
 | [azurerm_role_assignment.cloudfoundation_deploy](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment) | resource |
+| [azurerm_role_assignment.tfstate_blob](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment) | resource |
+| [azurerm_role_assignment.tfstate_storage_account](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment) | resource |
 | [azurerm_role_definition.cloudfoundation_deploy](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_definition) | resource |
 | [azurerm_storage_account.tfstate](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) | resource |
 | [azurerm_storage_container.tfstate](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_container) | resource |
@@ -54,11 +56,13 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_foundation_name"></a> [foundation\_name](#input\_foundation\_name) | n/a | `string` | n/a | yes |
 | <a name="input_output_md_file"></a> [output\_md\_file](#input\_output\_md\_file) | location of the file where this cloud foundation kit module generates its documentation output | `string` | n/a | yes |
 | <a name="input_platform_engineers_members"></a> [platform\_engineers\_members](#input\_platform\_engineers\_members) | User principal name of platform engineers with access to this platform's terraform state | `list(string)` | n/a | yes |
 | <a name="input_root_parent_id"></a> [root\_parent\_id](#input\_root\_parent\_id) | The root\_parent\_id is used to specify where to set the root for all Landing Zone deployments. Usually the Tenant ID | `string` | n/a | yes |
 | <a name="input_service_principal_name"></a> [service\_principal\_name](#input\_service\_principal\_name) | name of the Service Principal for deploying the cloud foundation | `string` | `"cloudfoundation_tf_deploy_user"` | no |
 | <a name="input_storage_account_name"></a> [storage\_account\_name](#input\_storage\_account\_name) | Name of storage account used as terraform backend | `string` | n/a | yes |
+| <a name="input_storage_rg_name"></a> [storage\_rg\_name](#input\_storage\_rg\_name) | Name of resource group holding the storage account used as terraform backend | `string` | `"tfstate"` | no |
 | <a name="input_tfstate_location"></a> [tfstate\_location](#input\_tfstate\_location) | location of tfstate resource group | `string` | n/a | yes |
 
 ## Outputs
